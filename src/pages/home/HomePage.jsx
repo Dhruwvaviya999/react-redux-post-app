@@ -2,7 +2,6 @@ import React, { useEffect } from 'react'
 import ItemComponent from '../../components/ItemComponent'
 import { useDispatch, useSelector } from 'react-redux'
 import { fetchUsers } from '../../slices/postSlice';
-import { Link } from 'react-router-dom';
 
 const HomePage = () => {
 
@@ -25,9 +24,7 @@ const HomePage = () => {
               loading ? <div className='loader-wrapper'><div className='loader'></div></div> :
                posts.map((post, index) => {
                 return (
-                  <Link to={`/item/${post.id}`} key={index}>
-                    <ItemComponent  userId={post.userId} postId={post.id} postBody={post.body} postTitle={post.title} postImgSrc={post.imageSrc} />
-                  </Link>
+                  <ItemComponent key={index} userId={post.userId} postId={post.id} postBody={post.body} postTitle={post.title} postImgSrc={post.imageSrc} />
                 )
               })
             }
