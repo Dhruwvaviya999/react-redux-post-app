@@ -18,7 +18,7 @@ const ItemComponent = ({ postBody, postTitle, postId, userId, postImgSrc }) => {
             <p>Title: {postTitle}</p>
             <p className="h-23 overflow-hidden">Body: {postBody}</p>
           </div>
-          <Link className="text-[#0000FF]" to={`/item/${postId}`} >Read More...</Link>
+          <Link className="text-[oklch(48.8% 0.243 264.376)]" to={`/item/${postId}`} >Read More...</Link>
         </div>
       </div>
     </>
