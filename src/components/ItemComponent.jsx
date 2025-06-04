@@ -1,5 +1,6 @@
 import React, { useState } from "react";
 import ImageWithPlaceholder from "./ImageWithPlaceHolder";
+import { Link } from "react-router-dom";
 
 const ItemComponent = ({ postBody, postTitle, postId, userId, postImgSrc }) => {
 
@@ -18,6 +19,7 @@ const ItemComponent = ({ postBody, postTitle, postId, userId, postImgSrc }) => {
             <p className="h-23 overflow-hidden">Body: {postBody}</p>
           </div>
         </div>
+        <Link to={`/item/${postId}`} >Read More...</Link>
       </div>
     </>
   );
